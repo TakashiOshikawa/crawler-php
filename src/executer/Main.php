@@ -4,9 +4,18 @@ require 'vendor/autoload.php';
 
 use GuzzleHttp\Client;
 use Mycrawler\Crawler;
+use Mycrawler\GuzzleWrapper;
+use Mycrawler\GoutteWrapper;
 
 
-$client = new Client([
+$crawler = new Crawler();
+$crawler
+    ->setRequestStartUrl('https://joins-job.com/')
+    ->setDomain('://joins-job.com')
+    ->run();
+
+var_dump($crawler->getUrls());
+/*$client = new Client([
     // Base URI is used with relative requests
     'base_uri' => 'http://httpbin.org',
     // You can set any number of default request options.
@@ -17,4 +26,4 @@ $client = new Client([
 $crawler = new Crawler();
 $crawler->echoArgString('test');
 echo "\n";
-
+ */
