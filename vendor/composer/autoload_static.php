@@ -4,12 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd3d00b9f77822b29c7ae2a8f4f6b0fc9
+class ComposerStaticInit4d869ee9030313fe64e95ba4c198aa0b
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
@@ -24,6 +24,10 @@ class ComposerStaticInitd3d00b9f77822b29c7ae2a8f4f6b0fc9
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
+        ),
+        'M' => 
+        array (
+            'Mycrawler\\' => 10,
         ),
         'G' => 
         array (
@@ -55,6 +59,10 @@ class ComposerStaticInitd3d00b9f77822b29c7ae2a8f4f6b0fc9
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'Mycrawler\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/mycrawler',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -76,8 +84,8 @@ class ComposerStaticInitd3d00b9f77822b29c7ae2a8f4f6b0fc9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd3d00b9f77822b29c7ae2a8f4f6b0fc9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd3d00b9f77822b29c7ae2a8f4f6b0fc9::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4d869ee9030313fe64e95ba4c198aa0b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4d869ee9030313fe64e95ba4c198aa0b::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
