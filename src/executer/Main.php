@@ -7,10 +7,9 @@ use Mycrawler\Crawler;
 use Mycrawler\GoutteWrapper;
 
 
-$crawler = new Crawler();
-$crawler
-    ->setRequestStartUrl('https://joins-job.com/')
-    ->setDomain('://joins-job.com')
-    ->run();
+$crawler = new Crawler('joins-job.com');
+$urls = $crawler
+    ->run()
+    ->getUrls();
 
-var_dump($crawler->getUrls());
+var_dump($urls);
